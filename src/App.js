@@ -1,8 +1,6 @@
 
 import './App.css';
-import Login from "./Login";
-import Register from "./Register";
-import { Welcome } from './Welcome';
+import { Welcome } from './pages/Welcome';
 
 function App() {
   return (
