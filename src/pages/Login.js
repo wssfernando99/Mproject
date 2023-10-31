@@ -1,11 +1,11 @@
 import  { useState } from 'react';
 import './login.css';
-import img1 from './image/mlogo.png';
+// import img1 from './img/mlogo.png'
 
 
 
 
-const LoginBox = () => {
+export const Login = () => {
   
   // const initialValues = {email:"" , password:""};
   // const [formValues ,setFormValues]= useState(initialValues);
@@ -47,26 +47,30 @@ const LoginBox = () => {
     <div className="background">
      
 
-      <div className="logo-container">
-        <img src={img1} className="App-logo" alt="logo" />
-      </div>
+      {/* <div className="logo1-container">
+        <img src={img1} className="App1-logo" alt="logo1" />
+      </div> */}
 
      
 
       <div className="login-container">
+        <div className='header'>
         <h1>Login</h1>
+        </div>
         <form  onSubmit={handleSubmit}>
           
 
           <label htmlFor="username">Email</label>
-          <input value= {email} type="email" name="email" id="email" /*value={formValues.email}*//>
+          <input  type="email" name="email" id="email" /*value={formValues.email}*//>
 
 
           <label htmlFor="password">Password</label>
-          <input value= {pass} type="password" name="password" id="password" /*value={formValues.password} onChange={handleChange}*//>
+          <input type="password" name="password" id="password" /*value={formValues.password} onChange={handleChange}*//>
 
-          <button type="submit">Login</button>
-          <p>Don't have account <link rel=''/>register </p>
+          <button  className='button' type="submit">Login</button>
+          <div className="link_to_other">
+          <p>Don't have account <span>Register?</span> </p>
+          </div>
         </form>
       </div>
     </div>
@@ -74,4 +78,3 @@ const LoginBox = () => {
   );
 };
 
-export default LoginBox;
