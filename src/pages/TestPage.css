@@ -1,0 +1,103 @@
+
+.background {
+    background-image: url('/src/images/BGimg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 2500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 1500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 50px;
+    /* left: 0px; */
+    /* width:100vw; */
+    /* height:100vh; */
+    /* z-index:-1; */
+    /* opacity: 0.7; */
+    
+
+  }
+ 
+
+
+
+  .questions {
+    background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
+    width: 80%;
+    
+    border-style: solid;
+    border-color: #161C84;
+    border-width: 0px;
+    
+    
+    
+  }
+  
+  h1{
+    margin: 10px;
+    color: #161C84;
+    font-family: Jomhuria;
+    font-size: 60px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  button {
+    background-color:#161C84;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    
+  }
+  
+  button:hover {
+    background-color: #1962af;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: -30px; /* Adjust the top position as needed */
+    left: -10px; /* Adjust the left position as needed */
+    z-index: 1; /* Ensure it's above the background */
+  }
+  
+  .App-logo {
+    width: 70px; /* Adjust the size of logo */
+    height: auto;
+    position: absolute;
+    top: 95px;
+    left: 520px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
