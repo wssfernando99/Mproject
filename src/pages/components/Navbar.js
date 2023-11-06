@@ -6,9 +6,9 @@ function Navbar() {
     <nav className="nav">
     <a href='#' className='nav__brand'>Autisum spectrum</a>
     <ul className='nav__menu'>
-      <li className='nav__item'><a href='#' className='nav__link'>home</a></li>
-      <li className='nav__item'><a href='#' className='nav__link'>Aboutus</a></li>
-      <li className='nav__item'><a href='#' className='nav__link'>help</a></li>
+      <li className='nav__item'><a href='#' className='nav__link'>home</a></li><hr/>
+      <li className='nav__item'><a href='#' className='nav__link'>Aboutus</a></li><hr/>
+      <li className='nav__item'><a href='#' className='nav__link'>help</a></li><hr/>
       <li className='nav__item'><a href='#' className='nav__link'>Log in</a></li>
     </ul>
     <div className='nav__toggler'>

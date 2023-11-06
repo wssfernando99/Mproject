@@ -42,13 +42,13 @@
     
   }
   
-  h1{
+  /* h1{
     margin: 10px;
     color: #161C84;
     font-family: Jomhuria;
     font-size: 60px;
   }
-  
+   */
   form {
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@
     
   }
   
-  button {
+  /* button {
     background-color:#161C84;
     color: #fff;
     padding: 20px;
@@ -78,11 +78,11 @@
     cursor: pointer;
     font-size: 20px;
     
-  }
+  } */
   
-  button:hover {
+  /* button:hover {
     background-color: #1962af;
-  }
+  } */
 
   .logo-container {
     position: absolute;

@@ -14,14 +14,14 @@
     }
     a{
         text-decoration: none;
-        color:darkgrey;
+        color:rgb(255, 255, 255);
     }
     .nav{
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: 8vh;
-        background-color: rgb(28, 4, 133);
+        background-color: rgb(69, 60, 109);
     }
     .nav__brand{
         text-transform: uppercase;
@@ -50,4 +50,6 @@
             display: block;
         }
     }
-    
+    hr{
+        height: 20px;
+    }
