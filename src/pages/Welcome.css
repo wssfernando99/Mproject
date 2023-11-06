@@ -12,7 +12,7 @@
 }
 .wrapper::after{
     content:'';
-    background-image:url('/src/images/background.jpg');
+    background-image:url('/src/pages/img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -120,7 +120,7 @@
     line-height: 80%; 
 } 
 #logo{
-    background-image: url('/src/images/logo.png');
+    background-image: url('/src/pages/img/logo.png');
     width: 200px;
     height: 100px;
     background-size: contain; /* Adjust the background size */
