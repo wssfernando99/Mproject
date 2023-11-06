@@ -4,16 +4,17 @@
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    height: 2500px;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:top;
     position: absolute;
-    width: 1500px;
+    width: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: absolute;
-    top: 50px;
+    flex-direction: column;
+    gap: 60px;
     /* left: 0px; */
     /* width:100vw; */
     /* height:100vh; */
@@ -23,7 +24,9 @@
 
   }
  
-
+.navbar{
+  width: 100vw;
+}
 
 
   .questions {
@@ -33,11 +36,12 @@
     text-align: center;
     box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
     width: 80%;
-    
     border-style: solid;
     border-color: #161C84;
     border-width: 0px;
-    
+    height: 55%;
+    overflow: auto;
+    margin-top: 5%;
     
     
   }
@@ -69,21 +73,22 @@
     
   }
   
-  /* button {
-    background-color:#161C84;
-    color: #fff;
-    padding: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  #rebutton{
     font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
     
-  } */
-  
-  /* button:hover {
-    background-color: #1962af;
-  } */
-
+}
+#rebutton:hover {
+  background-color: rgb(85, 103, 141);
+  color: white;
+  cursor: pointer
+}
   .logo-container {
     position: absolute;
     top: -30px; /* Adjust the top position as needed */
@@ -99,5 +104,9 @@
     left: 520px;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+  .resultbutton{
+    margin-right: -70%;
+    margin-bottom: 2%;
   }
   

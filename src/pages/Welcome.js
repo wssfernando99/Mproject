@@ -2,6 +2,7 @@ import React from 'react'
 import './Welcome.css'
 import Navbar from './components/Navbar';
 
+
 export const Welcome = () => {
   return (
     
