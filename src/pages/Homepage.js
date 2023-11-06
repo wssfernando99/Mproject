@@ -1,7 +1,7 @@
 import React from 'react'
 import './Homepage.css'
 
-export const Homepage = () => {
+ const Homepage = () => {
   return (
     
     <div className='wrapper'>
@@ -30,3 +30,5 @@ export const Homepage = () => {
 
   )
 }
+
+export default Homepage;
