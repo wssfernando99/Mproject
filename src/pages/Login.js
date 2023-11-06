@@ -1,80 +1,130 @@
-import  { useState } from 'react';
-import './login.css';
-// import img1 from './img/mlogo.png'
+import React, { useState } from "react";
+import "./login.css";
+// import img1 from "./image/mlogo.png";
+import validation from "./Loginvalidation";
+import { Link } from "react-router-dom";
+// import axios from "axios";
+
+const Login = () => {
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [Values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+
+
+//  const handleChange = (event) =>{
+//     setValues({
+//       ...Values,
+//       [event.target.name]: event.target.value,
+//     });
+//   }
 
 
 
+ const handleSubmit = (event) => {
+    console.log("Submit buton clicked");
+    console.log(Values);
+    event.preventDefault();
 
-export const Login = () => {
-  
-  // const initialValues = {email:"" , password:""};
-  // const [formValues ,setFormValues]= useState(initialValues);
-  // const [formErrors ,setFormErrors]= useState({});
+    setErrors(validation(Values));
+    if (
+      errors.email === "" &&
+      errors.password === ""
+    ) {
+      // console.log("No errors");
+      // axios
+      //   .post("http://localhost:8081/signup", Values)
+      //   .then((res) => {
+      //     if(res.status === 200){
+      //       console.log("Response:", res.data);
+      //       window.location = "http://localhost:3000/home";
+      //     }else if(res.status === 401){
+      //       console.log("Incorrect username and password");
+      //     }else{
+      //       console.log("Something went wrong");
+      //     }
+          
+    //     })
+    //     .catch((err) => console.log(err));
+    // } else {
+    //   console.log("Errors are there");
+    }
 
+    if (errors.email === "" && errors.password === "") {
+      // Validation has passed; you can make your axios post request here.
+    } else {
+      console.log("Errors are there");
+    }
+  };
 
-  // const handleChange =(e) => {
-  //   console.log(e.target);
-  //   const {name,value} = e.target;
-  // };
-
-    const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email);
-    };
-
-  //   const validate = (values) =>{ 
-  //     const errors ={};
-  //     const regex = /^[^\s@]+@[^\s@]+\. [^\s@]{2,}$/i;
-
-
-  //     if (!values.email){
-  //       errors.username = "e-mail is required"
-  //     }
-
-  //     if(!values.password){
-  //       errors.username = "password is required"
-  //     }
-
-  //   }
-
- const [email, setEmail] = useState ('');
- const [pass, setPass] = useState('');
-
+  const handleInput = (event) => {
+    const { name, value } = event.target;
+    setValues({
+      ...Values,
+      [name]: value,
+    });
+  };
 
   return (
-  
-  
     <div className="background">
-     
-
-      {/* <div className="logo1-container">
-        <img src={img1} className="App1-logo" alt="logo1" />
+      {/* <div className="logo-container">
+        <img src={img1} className="App-logo" alt="logo" />
       </div> */}
 
-     
-
       <div className="login-container">
-        <div className='header'>
-        <h1>Login</h1>
-        </div>
-        <form  onSubmit={handleSubmit}>
-          
+        <h1 className="header1">Login</h1>
+        <form action="" onSubmit={handleSubmit}>
+          <div className="box1">
+            <label className="box" htmlFor="email">
+              <strong>Email</strong>
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              onChange={handleInput}
+            />
+            {errors.email && (
+              <span className="text-alert"> {errors.email} </span>
+            )}
+          </div>
 
-          <label htmlFor="username">Email</label>
-          <input  type="email" name="email" id="email" /*value={formValues.email}*//>
+          <div className="box1">
+            <label className="box" htmlFor="password">
+              <strong>Password</strong>
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={handleInput}
+            />
+            {errors.password && (
+              <span className="text-alert"> {errors.password} </span>
+            )}
+          </div>
 
-
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" /*value={formValues.password} onChange={handleChange}*//>
-
-          <button  className='button' type="submit">Login</button>
-          <div className="link_to_other">
-          <p>Don't have account <span>Register?</span> </p>
+          <div >
+            <input type="submit" className="button2" value="Login" />
           </div>
         </form>
+        <div className="link_to_other">
+          {/* <Link to="/register"> */}
+            <p>
+              Don't have account  <Link to="/register"><span>Register</span></Link> 
+            </p>
+
+           
+          
+        </div>
       </div>
     </div>
-  
   );
 };
 
+export default Login;
