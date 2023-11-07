@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import img1 from "./image/mlogo.png";
+
 import "./register.css";
 import { Link } from "react-router-dom";
 
 import validation from './Registervalidation';
-// import axios from "axios";
+
 
  function Register() {
 
@@ -20,29 +20,14 @@ import validation from './Registervalidation';
     password: "",
   });
 
-  // const navigate = useNavigate();
+
   const HandleSubmit = (event) => {
     console.log("Submit buton clicked");
     console.log(Values);
     event.preventDefault();
 
     setErrors(validation(Values));
-    // if (
-    //   errors.username === "" &&
-    //   errors.email === "" &&
-    //   errors.password === ""
-    // ) {
-    //   console.log("No errors");
-    //   axios
-    //     .post("http://localhost:8081/signup", Values)
-    //     .then((res) => {
-    //       console.log("Response:", res.data);
-    //       window.location = "http://localhost:3000/login";
-    //     })
-    //     .catch((err) => console.log(err));
-    // } else {
-    //   console.log("Errors are there");
-    // }
+   
   };
 
   const handleInput = (event) => {
@@ -55,10 +40,7 @@ import validation from './Registervalidation';
 
   return (
     <div className="background">
-      {/* <div className="logo-container">
-        <img src={img1} className="App-logo" alt="logo" />
-      </div> */}
-
+    
       <div className="registration-container">
         <h1 className="header1">Register</h1>
         <form action="" onSubmit={HandleSubmit}>

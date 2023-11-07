@@ -17,12 +17,6 @@ const Login = () => {
   });
 
 
-//  const handleChange = (event) =>{
-//     setValues({
-//       ...Values,
-//       [event.target.name]: event.target.value,
-//     });
-//   }
 
 
 
@@ -36,23 +30,7 @@ const Login = () => {
       errors.email === "" &&
       errors.password === ""
     ) {
-      // console.log("No errors");
-      // axios
-      //   .post("http://localhost:8081/signup", Values)
-      //   .then((res) => {
-      //     if(res.status === 200){
-      //       console.log("Response:", res.data);
-      //       window.location = "http://localhost:3000/home";
-      //     }else if(res.status === 401){
-      //       console.log("Incorrect username and password");
-      //     }else{
-      //       console.log("Something went wrong");
-      //     }
-          
-    //     })
-    //     .catch((err) => console.log(err));
-    // } else {
-    //   console.log("Errors are there");
+     
     }
 
     if (errors.email === "" && errors.password === "") {
@@ -72,10 +50,7 @@ const Login = () => {
 
   return (
     <div className="background">
-      {/* <div className="logo-container">
-        <img src={img1} className="App-logo" alt="logo" />
-      </div> */}
-
+     
       <div className="login-container">
         <h1 className="header1">Login</h1>
         <form action="" onSubmit={handleSubmit}>
