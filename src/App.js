@@ -1,20 +1,27 @@
+
 import React from "react";
-// import Register from './component/Reg';
 import  Login from "./pages/Login";
 import Register from "./pages/Register";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import Homepage from "./pages/Homepage";
+import { Welcome } from './pages/Welcome';
+import { TestPage } from './pages/TestPage';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { Homepage } from './pages/Homepage';
+
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
+      <Route exact path='/' element={<Welcome />} />
+        <Route path='/Homepage' element={<Homepage />} />
+        <Route path='/TestPage' element={<TestPage />} />
         <Route exact path="/" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
-        {/* <Route exact path="/home" element={<Homepage />} /> */}
       </Routes>
-    </Router>
+    </BrowserRouter>
+
   );
 }
 

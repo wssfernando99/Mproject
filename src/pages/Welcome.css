@@ -1,0 +1,133 @@
+.wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column ;
+    justify-content: first baseline;
+    align-items: center;
+    
+}
+.navigationbar{
+    width: 100vw;
+}
+.wrapper::after{
+    content:'';
+    background-image:url('/src/pages/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width:100vw;
+    height:100vh;
+    z-index:-1;
+    opacity: 0.7;
+
+}
+
+    
+.wrapper2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 200px;
+    gap: 200px;
+    
+   
+}
+.container{
+    display: flex;
+    height: 380px;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    
+}
+.container2{
+    display: flex;
+    height: 380px;
+    width: 300px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.item1{
+
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(86, 86, 192);
+
+
+}
+.item2{
+
+    width: 60%;
+    height: 40%;
+    color: rgb(0, 0, 0);
+    font-size: 20px;;
+    font-weight: 600;
+}
+.item3{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+#bt1{
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
+}
+
+#bt2{
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
+}
+#bt1:hover {
+    background-color: rgb(85, 103, 141);
+    color: white;
+    cursor: pointer
+  }
+#bt2:hover {
+    background-color: rgb(85, 103, 141);
+    color: white;
+    cursor: pointer
+  }
+  .horizontal_line { 
+    background-color: rgb(53, 59, 58); 
+    width: 90%; 
+    height: 3px; 
+    line-height: 80%; 
+} 
+#logo{
+    background-image: url('/src/pages/img/logo.png');
+    width: 200px;
+    height: 100px;
+    background-size: contain; /* Adjust the background size */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-position: center; /* Center the image horizontally and vertically */
+    transition: transform 0.5s ease; 
+}
+#logo:hover {
+    transform: scale(1.3);
+  }

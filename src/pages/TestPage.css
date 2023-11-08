@@ -1,0 +1,112 @@
+
+.background {
+    background-image: url('/src/pages/img/BGimg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:top;
+    position: absolute;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    flex-direction: column;
+    gap: 60px;
+    /* left: 0px; */
+    /* width:100vw; */
+    /* height:100vh; */
+    /* z-index:-1; */
+    /* opacity: 0.7; */
+    
+
+  }
+ 
+.navbar{
+  width: 100vw;
+}
+
+
+  .questions {
+    background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
+    width: 80%;
+    border-style: solid;
+    border-color: #161C84;
+    border-width: 0px;
+    height: 55%;
+    overflow: auto;
+    margin-top: 5%;
+    
+    
+  }
+  
+  /* h1{
+    margin: 10px;
+    color: #161C84;
+    font-family: Jomhuria;
+    font-size: 60px;
+  }
+   */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  input {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  
+  #rebutton{
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
+    
+}
+#rebutton:hover {
+  background-color: rgb(85, 103, 141);
+  color: white;
+  cursor: pointer
+}
+  .logo-container {
+    position: absolute;
+    top: -30px; /* Adjust the top position as needed */
+    left: -10px; /* Adjust the left position as needed */
+    z-index: 1; /* Ensure it's above the background */
+  }
+  
+  .App-logo {
+    width: 70px; /* Adjust the size of logo */
+    height: auto;
+    position: absolute;
+    top: 95px;
+    left: 520px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .resultbutton{
+    margin-right: -70%;
+    margin-bottom: 2%;
+  }
+  
