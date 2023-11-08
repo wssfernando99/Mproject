@@ -85,7 +85,7 @@ const Login = () => {
           </div>
 
           <div >
-            <input type="submit" className="button2" value="Login" />
+            <Link to='/Homepage'><button className="button2">Login</button></Link>
           </div>
         </form>
         <div className="link_to_other">
