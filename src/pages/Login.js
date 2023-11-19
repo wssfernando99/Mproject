@@ -49,7 +49,7 @@ const Login = () => {
   };
 
   return (
-    <div className="background">
+    <div className="login-background">
      
       <div className="login-container">
         <h1 className="header1">Login</h1>
