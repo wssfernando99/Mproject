@@ -22,7 +22,7 @@ function validation(Values) {
   
     if (Values.password === "") {
       error.password = "*Password should not be empty";
-    } else if (password_pattern.test(Values.password)) {
+    } else if (!password_pattern.test(Values.password)) {
       error.password = "*Password didn't match";
     } else {
       error.password = "";

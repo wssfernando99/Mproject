@@ -8,42 +8,35 @@ import validation from './Registervalidation';
 
  function Register() {
 
-  const [errors, setErrors] = useState({
-    username: "",
-    email: "",
-    password: ""
-  });
 
   const [Values, setValues] = useState({
     username: "",
     email: "",
     password: "",
   });
+  
+  const [errors, setErrors] = useState({
+
+  })
 
 
-  const HandleSubmit = (event) => {
-    console.log("Submit buton clicked");
-    console.log(Values);
+  const handleSubmit = (event) => {
     event.preventDefault();
-
-    setErrors(validation(Values));
+    const validationErrors = validation(Values);
+    setErrors(validationErrors);
    
   };
 
-  const handleInput = (event) => {
-    const { name, value } = event.target;
-    setValues({
-      ...Values,
-      [name]: value,
-    });
-  };
+  const handleInput =(event) => {
+    setValues(prev => ({...prev,[event.target.name]: event.target.value}))
+}
 
   return (
     <div className="background">
     
       <div className="registration-container">
         <h1 className="header1">Register</h1>
-        <form action="" onSubmit={HandleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
           <div className="box1">
             <label htmlFor="username" className="box">
               <strong>Username</strong>
