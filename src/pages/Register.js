@@ -2,19 +2,21 @@ import React, { useState } from "react";
 
 import "./register.css";
 import { Link } from "react-router-dom";
-
-import validation from './Registervalidation';
+import Validation from './Registervalidation';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
  function Register() {
 
+  const navigate = useNavigate();
 
-  const [Values, setValues] = useState({
+  const [values, setValues] = useState({
     username: "",
     email: "",
     password: "",
   });
-  
+
   const [errors, setErrors] = useState({
 
   })
@@ -22,14 +24,22 @@ import validation from './Registervalidation';
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const validationErrors = validation(Values);
+    const validationErrors = Validation(values);
     setErrors(validationErrors);
+
+    if(!Object.values(validationErrors).some(error => error !=="")){
+      axios.post('http://localhost:8083/register', values)
+                .then(res => {
+                    navigate('/Login');
+                })
+                .catch(err => console.log(err));
+        }
+    }
    
-  };
 
   const handleInput =(event) => {
     setValues(prev => ({...prev,[event.target.name]: event.target.value}))
-}
+  }
 
   return (
     <div className="background">
@@ -45,7 +55,7 @@ import validation from './Registervalidation';
               type="text"
               id="username"
               name="username"
-              value={Values.username}
+              value={values.username}
               onChange={handleInput}
             />
             {errors.username && (
@@ -63,7 +73,7 @@ import validation from './Registervalidation';
               type="email"
               name="email"
               id="email"
-              value={Values.email}
+              value={values.email}
               onChange={handleInput}
             />
             {errors.email && (
@@ -79,7 +89,7 @@ import validation from './Registervalidation';
               type="password"
               name="password"
               id="password"
-              value={Values.password}
+              value={values.password}
               onChange={handleInput}
             />
             {errors.password && (
