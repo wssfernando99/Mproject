@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Homepage = () => {
   return (
     
-    <div className='wrapper'>
+    <div className='wrappe1r'>
       <div className='navigationbar'><Navbar /></div>
       <div className="wrapper2"> 
         <div className="container2">

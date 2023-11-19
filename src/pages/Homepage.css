@@ -1,4 +1,4 @@
-.wrapper {
+.wrapper1 {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -10,7 +10,7 @@
 .navigationbar{
     width: 100vw;
 }
-.wrapper::after{
+.wrappe1r::after{
     content:'';
     background-image:url('/src/pages/img/background.jpg');
     background-size: cover;

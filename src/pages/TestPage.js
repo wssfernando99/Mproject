@@ -21,7 +21,7 @@ export const TestPage = () => {
     return (
     
     
-      <div className="background">
+      <div className="background1">
        {/* <img src={img1} className="App-logo" alt="logo"/> */}
   
       <div className='navbar'><Navbar /></div>
