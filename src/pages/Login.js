@@ -1,52 +1,49 @@
 import React, { useState } from "react";
 import "./login.css";
 // import img1 from "./image/mlogo.png";
-import validation from "./Loginvalidation";
+import Validation from "./Loginvalidation";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({
+
+  })
+    
+
+  const [values, setValues] = useState({
     email: "",
     password: "",
   });
 
-  const [Values, setValues] = useState({
-    email: "",
-    password: "",
-  });
-
-
-
-
-
- const handleSubmit = (event) => {
-    console.log("Submit buton clicked");
-    console.log(Values);
+ const handleSubmit = (event) =>{
     event.preventDefault();
+    const validationErrors = Validation(values);
+    setErrors(validationErrors);
 
-    setErrors(validation(Values));
-    if (
-      errors.email === "" &&
-      errors.password === ""
-    ) {
-     
+    if(!Object.values(validationErrors).some(error => error !=="")){
+      axios.post('http://localhost:8083/login', values)
+        .then(res =>{
+          if(res.data === "Success"){
+            navigate("/Homepage");
+            // Store user data in localStorage after successful login
+            localStorage.setItem("user", JSON.stringify(values));
+          }
+          else{
+            alert("No record existed")
+          }
+
+        })
+        .catch(err => console.log(err));
     }
+ }
 
-    if (errors.email === "" && errors.password === "") {
-      // Validation has passed; you can make your axios post request here.
-    } else {
-      console.log("Errors are there");
-    }
-  };
-
-  const handleInput = (event) => {
-    const { name, value } = event.target;
-    setValues({
-      ...Values,
-      [name]: value,
-    });
-  };
+ const handleInput =(event) => {
+  setValues(prev => ({...prev,[event.target.name]: [event.target.value]}))
+}
 
   return (
     <div className="login-background">
@@ -54,7 +51,7 @@ const Login = () => {
       <div className="login-container">
         <h1 className="header1">Login</h1>
         <form action="" onSubmit={handleSubmit}>
-          <div className="box1">
+        <div className="box1">
             <label className="box" htmlFor="email">
               <strong>Email</strong>
             </label>
@@ -67,9 +64,9 @@ const Login = () => {
             {errors.email && (
               <span className="text-alert"> {errors.email} </span>
             )}
-          </div>
+        </div>
 
-          <div className="box1">
+        <div className="box1">
             <label className="box" htmlFor="password">
               <strong>Password</strong>
             </label>
@@ -82,11 +79,11 @@ const Login = () => {
             {errors.password && (
               <span className="text-alert"> {errors.password} </span>
             )}
-          </div>
+        </div>
 
-          <div >
-            <Link to='/Homepage'><button className="button2">Login</button></Link>
-          </div>
+        <div >
+            <button className="button2">Login</button>
+        </div>
         </form>
         <div className="link_to_other">
           {/* <Link to="/register"> */}

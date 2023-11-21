@@ -47,7 +47,7 @@ import axios from "axios";
       <div className="registration-container">
         <h1 className="header1">Register</h1>
         <form action="" onSubmit={handleSubmit}>
-          <div className="box1">
+        <div className="box1">
             <label htmlFor="username" className="box">
               <strong>Username</strong>
             </label>
@@ -61,11 +61,11 @@ import axios from "axios";
             {errors.username && (
               <span className="text-alert"> {errors.username} </span>
             )}
-          </div>
+        </div>
 
          
 
-          <div className="box1">
+        <div className="box1">
             <label htmlFor="email" className="box">
               <strong>Email</strong>
             </label>
@@ -79,9 +79,9 @@ import axios from "axios";
             {errors.email && (
               <span className="text-alert"> {errors.email} </span>
             )}
-          </div>
+        </div>
 
-          <div className="box1">
+        <div className="box1">
             <label htmlFor="password" className="box">
               <strong>Password</strong>
             </label>
@@ -95,7 +95,7 @@ import axios from "axios";
             {errors.password && (
               <span className="text-alert"> {errors.password} </span>
             )}
-          </div>
+        </div>
           <div >
           <button type="submit" className="button1" value="Register">Register</button>
           </div>
