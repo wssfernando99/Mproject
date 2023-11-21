@@ -1,24 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css'
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 function Navbar() {
+  const  auth = localStorage.getItem("user");
+  const navigate = useNavigate();
+  const logout =()=>{
+    localStorage.clear();
+    navigate("/")
+  }
+  const preventBack = (event) =>{
+    window.history.forward();
+  }
+
+
   return (
-    <nav className="nav">
-    <a href='#' className='nav__brand'>Autisum spectrum</a>
+
+    <div className="nav">
+    <a className='nav__brand'>Autisum spectrum</a>
     <ul className='nav__menu'>
       <li className='nav__item'><Link to='/Homepage'><a href='#' className='nav__link'>home</a></Link></li><hr/>
-      <li className='nav__item'><a href='#' className='nav__link'>Aboutus</a></li><hr/>
+      <li className='nav__item'><Link to ='/aboutpage'><a href='#' className='nav__link'>Aboutus</a></Link></li><hr/>
       <li className='nav__item'><a href='#' className='nav__link'>help</a></li><hr/>
-      <li className='nav__item'><Link to='/Login'><a href='#' className='nav__link'>Log in</a></Link></li>
+      <li className='nav__item'>{auth ?<Link onClick={logout} to='/'><a href='#' className='nav__link'>Logout</a></Link>
+      :<Link to="/Login"><a href='#' className='nav__link'>Login</a></Link>}</li>
     </ul>
+  
     <div className='nav__toggler'>
         <div className='line1'></div>
         <div className='line2'></div>
         <div className='line3'></div>
     </div>
+      
+    </div>
     
-    </nav>
 
   )
 }
