@@ -25,8 +25,8 @@ export const TestPage = () => {
        {/* <img src={img1} className="App-logo" alt="logo"/> */}
   
       <div className='navbar'><Navbar /></div>
+      <div className='topic'><h1>AQ-10 Test</h1></div>
       <div className="questions">
-          <h1>AQ-10 Test</h1>
           <Testcom question = "1. Does your child look at you when you call his/her name?" />
           <Testcom question = "2. How easy is it for you to get eye contact with your child?" />
           <Testcom question = "3. Does your child point to indicate that he/she wants something? (e.g.- Toy that is out of reach)" />
