@@ -7,6 +7,7 @@ import { TestPage } from './pages/TestPage';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
+import { Aboutpage } from "./pages/Aboutpage";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/TestPage' element={<TestPage />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/aboutpage" element={<Aboutpage />} />
       </Routes>
     </BrowserRouter>
 
