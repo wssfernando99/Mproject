@@ -1,4 +1,6 @@
-.wrapper1 {
+
+
+.wrapper {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -10,7 +12,7 @@
 .navigationbar{
     width: 100vw;
 }
-.wrappe1r::after{
+.wrapper::after{
     content:'';
     background-image:url('/src/pages/img/background.jpg');
     background-size: cover;
@@ -99,12 +101,8 @@
     color: white;
     cursor: pointer
   }
-#bt2:hover {
-    background-color: rgb(85, 103, 141);
-    color: white;
-    cursor: pointer
-  }
-  .horizontal_line { 
+
+.horizontal_line { 
     background-color: rgb(53, 59, 58); 
     width: 90%; 
     height: 3px; 
