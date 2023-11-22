@@ -7,22 +7,19 @@ function Navbar() {
   const navigate = useNavigate();
   const logout =()=>{
     localStorage.clear();
-    navigate("/")
+    navigate("/Login")
   }
-  const preventBack = (event) =>{
-    window.history.forward();
-  }
-
-
-  return (
+    
+return (
 
     <div className="nav">
     <a className='nav__brand'>Autisum spectrum</a>
     <ul className='nav__menu'>
-      <li className='nav__item'><Link to='/Homepage'><a href='#' className='nav__link'>home</a></Link></li><hr/>
+      <li className='nav__item'>{auth ? <Link to='/Homepage'><a href='#' className='nav__link'>home</a></Link>
+      :<Link to='/'><a href='#' className='nav__link'>home</a></Link>}</li><hr/>
       <li className='nav__item'><Link to ='/aboutpage'><a href='#' className='nav__link'>Aboutus</a></Link></li><hr/>
       <li className='nav__item'><a href='#' className='nav__link'>help</a></li><hr/>
-      <li className='nav__item'>{auth ?<Link onClick={logout} to='/'><a href='#' className='nav__link'>Logout</a></Link>
+      <li className='nav__item'>{auth ?<Link onClick={logout} to='/Login'><a href='#' className='nav__link'>Logout</a></Link>
       :<Link to="/Login"><a href='#' className='nav__link'>Login</a></Link>}</li>
     </ul>
   
