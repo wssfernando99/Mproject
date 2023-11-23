@@ -5,31 +5,26 @@ import { Testcom } from './components/Testcom';
 import Navbar from './components/Navbar';
 
 export const TestPage = () => {
-
-  const [selectedOption, setSelectedOption] = useState('');
-
-  const handleRadioChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (selectedOption === '') {
-      alert('Please select an option.');
-      return;
-    }
-
-    // Submit the form
-    console.log('Submitting form with selected option:', selectedOption);
-  };
+    const [selectedOption, setSelectedOption] = useState(null);
+  
+    const handleOptionChange = (event) => {
+      setSelectedOption(event.target.value);
+    };
+  
+    const handleSubmit = () => {
+      if (selectedOption !== null) {
+        console.log(`Selected option: ${selectedOption}`);
+      } else {
+        console.log('No option selected');
+      }
+    };
     return (
-
+    
+    
       <div className="background1">
        {/* <img src={img1} className="App-logo" alt="logo"/> */}
   
       <div className='navbar'><Navbar /></div>
-      <form onSubmit={handleSubmit}>
       <div className='topic'><h1>AQ-10 Test</h1></div>
       <div className="questions">
           <Testcom question = "1. Does your child look at you when you call his/her name?" />
@@ -44,10 +39,11 @@ export const TestPage = () => {
           <Testcom question = "10. Does your child stare at nothing with no apparent purpose?" />
       </div>
       <div className='resultbutton'>
-         <button className='rebutton' id='rebutton' type='submit'>Result</button>
+         <button className='rebutton' id='rebutton' >Result</button>
       </div>
-      </form>
       </div>
     
     );
   };
+  
+  
