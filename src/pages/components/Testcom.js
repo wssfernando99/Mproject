@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 
 export const Testcom = (props) => {
@@ -12,6 +13,7 @@ export const Testcom = (props) => {
     const handleSubmit = () => {
       if (selectedOption !== null) {
         console.log(`Selected option: ${selectedOption}`);
+        
       } else {
         console.log('No option selected');
       }

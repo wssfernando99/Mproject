@@ -1,58 +1,56 @@
-
-.background {
-    background-image: url('/src/pages/img/BGimg.jpg');
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content:top;
-    position: absolute;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: absolute;
-    flex-direction: column;
-    gap: 60px;
-    /* left: 0px; */
-    /* width:100vw; */
-    /* height:100vh; */
-    /* z-index:-1; */
-    /* opacity: 0.7; */
-    
-
-  }
+body::-webkit-scrollbar {
+  display: none;
+  height: 2000px;
  
-.navbar{
-  width: 100vw;
 }
 
 
-  .questions {
+
+.background {
+  
+    
+    background-image: url('/src/pages/img/vecteezy_illustration-vector-graphic-of-international-day-of-families_.jpg');
+    background-attachment: fixed;
+    /* background-repeat: no-repeat;  */
+     height: fit-content; 
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    gap: 60px;
+  
+   }
+  .navbar{
+    width: 100vw;
+    position: fixed;
+   
+   
+  }
+ 
+
+
+
+.questions {
     background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
-    padding: 20px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
-    width: 80%;
+    padding: 50px;
+    border-radius: 40px;
+    padding-top: 10px;
+    width: 1100px;
     border-style: solid;
     border-color: #161C84;
-    border-width: 0px;
-    height: 55%;
-    overflow: auto;
-    margin-top: 5%;
-    
+    border-width: 1px;
+   
+   }
+  
+  .header{
+  
+    margin: 100px;
+    color: #161C84;
+    font-family: Jomhuria;
+    font-size: 90px;
     
   }
   
-  /* h1{
-    margin: 10px;
-    color: #161C84;
-    font-family: Jomhuria;
-    font-size: 60px;
-  }
-   */
   form {
     display: flex;
     flex-direction: column;
@@ -105,8 +103,21 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
-  .resultbutton{
-    margin-right: -70%;
-    margin-bottom: 2%;
+ 
+  .Result{
+    background-color:#161C84;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 130px;
+    padding-top: 9px;
+    /* margin-top: 20px; */
+    height: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+
   }
   
