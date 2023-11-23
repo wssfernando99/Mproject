@@ -3,32 +3,25 @@ import { useState } from "react";
 
 
 export const Testcom = (props) => {
-    const [selectedOption, setSelectedOption] = useState(null);
-  
-    const handleOptionChange = (event) => {
-      setSelectedOption(event.target.value);
-    };
-  
-    const handleSubmit = () => {
-      if (selectedOption !== null) {
-        console.log(`Selected option: ${selectedOption}`);
-      } else {
-        console.log('No option selected');
-      }
-    };
+   
+      const [selectedOption, setSelectedOption] = useState('');
+    
+      const handleRadioChange = (event) => {
+        setSelectedOption(event.target.value);
+      };
     return (
     
 
         
-        <form>
+        <div>
             
             <label htmlFor="q1">{props.question}</label>
               <label>
                <input
                   type="radio"
-                  value="q1a1"
-                  checked={selectedOption === 'q1a1'}
-                  onChange={handleOptionChange}
+                  value="option1"
+                  checked={selectedOption === 'option1'}
+                  onChange={handleRadioChange}
                />
                   Strongly Agree
               </label>
@@ -36,9 +29,9 @@ export const Testcom = (props) => {
               <label>
                <input
                   type="radio"
-                  value="q1a2"
-                  checked={selectedOption === 'q1a2'}
-                  onChange={handleOptionChange}
+                  value="option2"
+                  checked={selectedOption === 'option2'}
+                  onChange={handleRadioChange}
                />
                   Agree
               </label>
@@ -46,9 +39,9 @@ export const Testcom = (props) => {
               <label>
                <input
                   type="radio"
-                  value="q1a3"
-                  checked={selectedOption === 'q1a3'}
-                  onChange={handleOptionChange}
+                  value="option3"
+                  checked={selectedOption === 'option3'}
+                  onChange={handleRadioChange}
                />
                   Disagree
               </label>
@@ -56,13 +49,14 @@ export const Testcom = (props) => {
               <label>
                <input
                   type="radio"
-                  value="q1a4"
-                  checked={selectedOption === 'q1a4'}
-                  onChange={handleOptionChange}
+                  value="option4"
+                  checked={selectedOption === 'option4'}
+                  onChange={handleRadioChange}
                />
                   Strongly Disagree
               </label>
-        </form>
+              {selectedOption === '' ? <p>Please select an option.</p> : null}
+        </div>
      );
     };
     
