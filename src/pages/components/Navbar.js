@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import './navbar.css'
+import './nav.css'
 import { Link , useNavigate} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const  auth = localStorage.getItem("user");
   const navigate = useNavigate();
+
   const logout =()=>{
     localStorage.clear();
     navigate("/Login")
@@ -12,24 +15,22 @@ function Navbar() {
     
 return (
 
-    <div className="nav">
+  <nav className="nav">
     <a className='nav__brand'>Autisum spectrum</a>
-    <ul className='nav__menu'>
-      <li className='nav__item'>{auth ? <Link to='/Homepage'><a href='#' className='nav__link'>home</a></Link>
-      :<Link to='/'><a href='#' className='nav__link'>home</a></Link>}</li><hr/>
-      <li className='nav__item'><Link to ='/aboutpage'><a href='#' className='nav__link'>Aboutus</a></Link></li><hr/>
-      <li className='nav__item'><a href='#' className='nav__link'>help</a></li><hr/>
-      <li className='nav__item'>{auth ?<Link onClick={logout} to='/Login'><a href='#' className='nav__link'>Logout</a></Link>
-      :<Link to="/Login"><a href='#' className='nav__link'>Login</a></Link>}</li>
-    </ul>
-  
-    <div className='nav__toggler'>
+    <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <div className='line1'></div>
-        <div className='line2'></div>
-        <div className='line3'></div>
+        <div className='line1'></div>
+        <div className='line1'></div>
     </div>
-      
-    </div>
+    <ul id="nav_tiles" className={menuOpen ? "open" : ""}>
+      <li className='nav__item'>{auth ? <NavLink to='/Homepage' style={{ textDecoration: 'none' }}><h4>home</h4></NavLink>
+      :<NavLink to='/' style={{ textDecoration: 'none' }}><h4>home</h4></NavLink>}</li>
+      <li className='nav__item'><NavLink to ='/aboutpage' style={{ textDecoration: 'none' }}><h4>Aboutus</h4></NavLink></li>
+      <li className='nav__item'><h4>help</h4></li>
+      <li className='nav__item'>{auth ?<NavLink onClick={logout} to='/Login' style={{ textDecoration: 'none' }}><h4>Logout</h4></NavLink>
+      :<NavLink to="/Login" style={{ textDecoration: 'none' }}><h4>Login</h4></NavLink>}</li>
+    </ul>
+  </nav>
     
 
   )
