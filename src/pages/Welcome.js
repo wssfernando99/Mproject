@@ -1,6 +1,7 @@
 import React from 'react'
 import './Welcome.css'
 import Navbar from './components/Navbar';
+import { Link } from 'react-router-dom';
 
 
 export const Welcome = () => {
@@ -23,7 +24,7 @@ export const Welcome = () => {
           <div className='item2'><p>Childhood is the most fun and memorable time in anyone's life.it's first stage of life which we enjoy in what ever we like</p>
           </div>
             <div className="item3">
-              <div className='bt1'><button id='bt1'>Sign up</button></div>
+              <Link to ="/Register"><div className='bt1'><button id='bt1'>Sign up</button></div></Link>
               <div className='bt1'><button id='bt2'>Learn More</button></div>
             </div>
         </div>

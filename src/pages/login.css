@@ -1,5 +1,5 @@
-.background {
-  /* background-image: url('./img/register4.jpg'); */
+.login-background {
+  background-image: url('./img/register4.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -8,14 +8,21 @@
   justify-content: center;
   position: relative;
 
+
 }
 .box1 {
-  margin: 10px 20;
+  /* margin: 10px 20; */
   font-size: 13px;
   font-weight: bold;
   color: rgb(172, 7, 7);
   width: 200px;
-  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #161C84; */
+    /* margin-left: 75px; */
+
 }
 
 .link_to_other span{
@@ -36,6 +43,10 @@
   text-align: center;
   box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
   width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
   border-style: solid;
   border-color: #161C84;

@@ -2,49 +2,52 @@ import React, { useState } from "react";
 
 import "./register.css";
 import { Link } from "react-router-dom";
-
-import validation from './Registervalidation';
+import Validation from './Registervalidation';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
  function Register() {
 
-  const [errors, setErrors] = useState({
-    username: "",
-    email: "",
-    password: ""
-  });
+  const navigate = useNavigate();
 
-  const [Values, setValues] = useState({
+  const [values, setValues] = useState({
     username: "",
     email: "",
     password: "",
   });
 
+  const [errors, setErrors] = useState({
 
-  const HandleSubmit = (event) => {
-    console.log("Submit buton clicked");
-    console.log(Values);
+  })
+
+
+  const handleSubmit = (event) => {
     event.preventDefault();
+    const validationErrors = Validation(values);
+    setErrors(validationErrors);
 
-    setErrors(validation(Values));
+    if(!Object.values(validationErrors).some(error => error !=="")){
+      axios.post('http://localhost:8083/register', values)
+                .then(res => {
+                    navigate('/Login');
+                })
+                .catch(err => console.log(err));
+        }
+    }
    
-  };
 
-  const handleInput = (event) => {
-    const { name, value } = event.target;
-    setValues({
-      ...Values,
-      [name]: value,
-    });
-  };
+  const handleInput =(event) => {
+    setValues(prev => ({...prev,[event.target.name]: event.target.value}))
+  }
 
   return (
     <div className="background">
     
       <div className="registration-container">
         <h1 className="header1">Register</h1>
-        <form action="" onSubmit={HandleSubmit}>
-          <div className="box1">
+        <form action="" onSubmit={handleSubmit}>
+        <div className="box1">
             <label htmlFor="username" className="box">
               <strong>Username</strong>
             </label>
@@ -52,17 +55,17 @@ import validation from './Registervalidation';
               type="text"
               id="username"
               name="username"
-              value={Values.username}
+              value={values.username}
               onChange={handleInput}
             />
             {errors.username && (
               <span className="text-alert"> {errors.username} </span>
             )}
-          </div>
+        </div>
 
          
 
-          <div className="box1">
+        <div className="box1">
             <label htmlFor="email" className="box">
               <strong>Email</strong>
             </label>
@@ -70,15 +73,15 @@ import validation from './Registervalidation';
               type="email"
               name="email"
               id="email"
-              value={Values.email}
+              value={values.email}
               onChange={handleInput}
             />
             {errors.email && (
               <span className="text-alert"> {errors.email} </span>
             )}
-          </div>
+        </div>
 
-          <div className="box1">
+        <div className="box1">
             <label htmlFor="password" className="box">
               <strong>Password</strong>
             </label>
@@ -86,13 +89,13 @@ import validation from './Registervalidation';
               type="password"
               name="password"
               id="password"
-              value={Values.password}
+              value={values.password}
               onChange={handleInput}
             />
             {errors.password && (
               <span className="text-alert"> {errors.password} </span>
             )}
-          </div>
+        </div>
           <div >
           <button type="submit" className="button1" value="Register">Register</button>
           </div>
