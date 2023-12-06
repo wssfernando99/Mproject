@@ -1,6 +1,6 @@
 
 
-.background {
+.background1{
   background-image: url('./img/register4.jpg');
   background-size: cover;
   background-position: center;
@@ -98,4 +98,10 @@ cursor: pointer;
 font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .registration-container {
+    width: 60%; 
+    height: 50%;
 
+  }
+}

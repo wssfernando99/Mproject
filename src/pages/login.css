@@ -110,3 +110,17 @@ button:hover {
   width: 400px; /* Adjust the size of logo */
   height: auto;
 }
+
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 60%; /* Adjust the width for smaller screens */
+    height: 40%;
+  }
+
+  /* .header1 {
+    font-size: 70px; /* Adjust font size for smaller screens */
+  
+
+ 
+}
