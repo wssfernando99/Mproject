@@ -2,14 +2,17 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    flex-direction: row ;
-    gap: 0px;
-    justify-content: center;
+    flex-direction: column ;
+    justify-content: first baseline;
+    align-items: center;
     
+}
+.navigationbar{
+    width: 100vw;
 }
 .wrapper::after{
     content:'';
-    background-image:url('/src/images/background.jpg');
+    background-image:url('/src/pages/img/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,33 +29,35 @@
     
 .wrapper2{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-around; 
     width: 80%;
-    margin-top: 230px;
+    margin-top: 150px;
     gap: 200px;
+    height: 200%;
     
    
 }
 .container{
     display: flex;
-    height: 430px;
+    height: 380px;
     width: 450px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    text-align: center;
     
 }
 .container2{
     display: flex;
-    height: 420px;
+    height: 380px;
     width: 300px;
     color: rgb(0, 0, 0);
     font-size: 20px;;
     font-weight: 600;
     flex-direction: column;
     align-items: center;
-    
+    text-align: center;
 
 }
 .item1{
@@ -115,7 +120,7 @@
     line-height: 80%; 
 } 
 #logo{
-    background-image: url('/src/images/logo.png');
+    background-image: url('/src/pages/img/logo.png');
     width: 200px;
     height: 100px;
     background-size: contain; /* Adjust the background size */
@@ -126,3 +131,30 @@
 #logo:hover {
     transform: scale(1.3);
   }
+
+@media (max-width: 768px){
+.wrapper2{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-top: 20px;
+}
+.container{
+    width: 350px;
+    gap: 0px;
+}
+.container2{
+    width: 350px;
+    gap: 0px;
+}
+.item3{
+bottom: 1px;
+    
+}
+.item2{
+
+    height: 60%;
+    
+}
+}

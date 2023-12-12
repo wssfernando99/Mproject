@@ -1,87 +1,101 @@
-.background {
-    /* background-image: url('./images/register4.jpg'); */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 
-  }
+
+.background {
+  background-image: url('./img/register4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
  
 
+}
 
 
 
-  .registration-container {
-    background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
-    padding: 20px;
-    border-radius: 30px;
-    text-align: center;
-    box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
-    width: 340px;
-    
-    border-style: solid;
-    border-color: #161C84;
-    border-width: 0px;
-    
-    
-    
-  }
-  
-  .header{
-    margin: 0px;
-    color: #161C84;
-    font-family: Jomhuria;
-    font-size: 25px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin: 10px 0;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 5px;
-    margin: 5px 0;
-    border: 1px solid #070606;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color:#161C84;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #1962af;
-  }
 
-  .logo-container {
-    position: absolute;
-    top: -30px; /* Adjust the top position as needed */
-    left: -10px; /* Adjust the left position as needed */
-    z-index: 1; /* Ensure it's above the background */
-  }
-  
-  .App-logo {
-    width: 400px; /* Adjust the size of logo */
-    height: auto;
-  }
 
-.link_to_other span{
+.registration-container {
+  background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: #161C84;
+  border-width: 0px;
+  
+  
+  
+}
+
+.header1{
+  margin: 10px;
   color: #161C84;
-  cursor: pointer;
+  font-family: Jomhuria;
+  font-size: 70px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0;
+  font-size: 15px;
   font-weight: bold;
 }
+
+input {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #070606;
+  border-radius: 4px;
+}
+
+.button1 {
+  background-color:#161C84;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 130px;
+  padding-top: 8px;
+  margin-top: 20px;
+  height: 30px;
+  margin-left: 18px;
+  
+}
+
+button:hover {
+  background-color: #1962af;
+}
+
+.logo-container {
+  position: absolute;
+  top: -30px; /* Adjust the top position as needed */
+  left: -10px; /* Adjust the left position as needed */
+  z-index: 1; /* Ensure it's above the background */
+}
+
+.App-logo {
+  width: 400px; /* Adjust the size of logo */
+  height: auto;
+}
+
+.link_to_other span{
+color: #161C84;
+cursor: pointer;
+font-weight: bold;
+}
+
+

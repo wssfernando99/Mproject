@@ -1,52 +1,51 @@
 
-.background {
-    background-image: url('/src/images/BGimg.jpg');
+.background1 {
+    background-image: url('/src/pages/img/BGimg.jpg');
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    height: 2500px;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:top;
     position: absolute;
-    width: 1500px;
+    width: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: absolute;
-    top: 50px;
+    flex-direction: column;
+    gap: 30px;
     /* left: 0px; */
     /* width:100vw; */
     /* height:100vh; */
     /* z-index:-1; */
     /* opacity: 0.7; */
-    
 
   }
  
-
+.navbar{
+  width: 100vw;
+}
+.topic{
+ 
+}
 
 
   .questions {
     background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
-    padding: 20px;
+    padding: 30px;
     border-radius: 30px;
     text-align: center;
     box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
-    width: 80%;
-    
+    width: 70%;
     border-style: solid;
     border-color: #161C84;
     border-width: 0px;
+    height: 60%;
+    overflow: auto;
+    margin-top: 1%;
     
     
-    
-  }
-  
-  h1{
-    margin: 10px;
-    color: #161C84;
-    font-family: Jomhuria;
-    font-size: 60px;
   }
   
   form {
@@ -69,21 +68,22 @@
     
   }
   
-  button {
-    background-color:#161C84;
-    color: #fff;
-    padding: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  #rebutton{
     font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
     
-  }
-  
-  button:hover {
-    background-color: #1962af;
-  }
-
+}
+#rebutton:hover {
+  background-color: rgb(85, 103, 141);
+  color: white;
+  cursor: pointer
+}
   .logo-container {
     position: absolute;
     top: -30px; /* Adjust the top position as needed */
@@ -99,5 +99,9 @@
     left: 520px;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+  .resultbutton{
+    margin-right: -70%;
+    margin-bottom: 2%;
   }
   
