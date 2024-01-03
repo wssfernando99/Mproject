@@ -112,7 +112,10 @@ const questions = [
   {
     id: 1,
     text: '01) Does your child look at you when you call his/her name?',
-    options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
+    options: [{value: '1' , label:'Strongly Agree'},
+              {value: '0.7', label:'Agree'},
+              {value: '0.5' , label:'Disagree'},
+              {value:'0.3' ,label: 'Strongly Disagree'}],
   },
 
   {
@@ -143,6 +146,29 @@ const questions = [
     text: '06) Does your child pretend? (e.g.- Care for dolls, talks on a toy phone)',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
+  {
+    id: 7,
+    text: '07) If you or someone else in the family is visibly upset, does your child show signs of wanting to comfort them? (e.g.- Stroking hair, hugging them',
+    options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
+  },
+
+  {
+    id: 8,
+    text: `08) Would you describe your child's first words  as:`,
+    options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
+  },
+  {
+    id: 9,
+    text: '09) Does your child use simple gestures? (e.g.- Wave goodbye',
+    options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
+  },
+  {
+    id: 10,
+    text: '10)Does your child stare at nothing with no apparent purpose? ',
+    options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
+   
+  }
+
   
 ];
 
@@ -167,7 +193,7 @@ export const TestPage = () => {
 
    if (hasAnsweredAllQuestions) {
         
-        navigate('/'); 
+        navigate('/Homepage'); 
       } else {
         setShowError(true);
       }
@@ -176,10 +202,12 @@ export const TestPage = () => {
   };
 
   return (
-    <div className="background">
-      <div className='navbar'><Navbar /></div>
+    <><div className='navbar'><Navbar /></div>
+    <div className="background2">
+      
+      <div className='header'><h1>AQ-10 Test</h1></div>
       <div className="questions">
-        <div className='header'><h1>AQ-10 Test</h1></div>
+        
         {questions.map((question) => (
           <div key={question.id}>
             <p>{question.text}</p>
@@ -190,18 +218,22 @@ export const TestPage = () => {
                   value={`q${question.id}a${index + 1}`}
                   checked={selectedOptions[question.id] === `q${question.id}a${index + 1}`}
                   onChange={() => handleOptionChange(question.id, `q${question.id}a${index + 1}`)}
-                />
+                  />
+                
                 {option}
               </label>
             ))}
+            
           </div>
         ))}
       </div>
-      <div className='resultbutton'>
-        <button className='rebutton' id='rebutton' onClick={handleSubmit}>Result</button>
-        {showError && <p className="error-message">Please answer all questions.</p>}
-      </div>
+         <div className='error-question'>{showError && <p className="error-message">Please answer all questions.</p>}</div>
+        <button className='rebutton' id='rebutton' onClick={handleSubmit}>Result </button>
+        
+         
+     
     </div>
+    </>
   );
 };
 

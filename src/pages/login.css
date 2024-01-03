@@ -114,8 +114,8 @@ button:hover {
 
 @media (max-width: 768px) {
   .login-container {
-    width: 60%; /* Adjust the width for smaller screens */
-    height: 40%;
+    width: 100%; /* Adjust the width for smaller screens */
+    height: 100%;
   }
 
   /* .header1 {

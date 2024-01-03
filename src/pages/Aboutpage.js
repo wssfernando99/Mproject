@@ -1,12 +1,20 @@
 import React from 'react'
 import Navbar from './components/Navbar';
+import './aboutpage.css';
 
 export const Aboutpage = () => {
   return (
     <div className='container'>
-        <div className='navigationbar'><Navbar /></div>
+        <div className='navbar1'><Navbar /></div>
 
-        <div>aboutpage</div>
+        <div className='background-about'>
+        
+
+
+
+        
+        
+        </div>
     </div>
     
   )

@@ -1,125 +1,153 @@
+/* body::-webkit-scrollbar {
+  display: none;                      /* This is used to hide scroll bar*/
+  /* height: 2000px;
+} */  
 
-body::-webkit-scrollbar {
-  display: none;
-  height: 2000px;
-
- 
+.background2{
+  background-image: url('/src/pages/img/medium-shot-child-being-creative.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  flex-direction: column;
+  /* gap: 30px; */
+  justify-content: flex-start;
+  display: flex;
 }
-.background2 {
-   background-image: url('/src/pages/img/Untitled-1.png');
-    background-size: cover;
-    /* background-position-x: center;
-    background-position-y: center; */
-    height: 400vh;
-    display: flex;
-    align-items: center;
-    /* justify-content:top; */
-    position: absolute;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: flex-start;
-    background-attachment: fixed;
-    
-  
-    
-  
-   }
-  .navbar{
-    width: 100vw;
-    position: fixed;
-   
-   
-  }
+.questions{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
-.questions {
-  /* background-color: rgba(255, 255, 255, 0.663); 
-  padding: 20px;
-  border-radius: 30px;
+.questions div{
+  /* Create a box for each question */
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 30px; /*  Add rounded corners */
+  gap: 10px;
+  position: relative;
+  left: 70px;
+  width: 1300px;
+  top: 60px;
+}
+
+/* Style the question text */
+.questions div p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the options */
+.questions div label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style the radio buttons */
+.questions div input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Optional: Add background color to selected options */
+.questions div input[type="radio"]:checked + label {
+  background-color: #ffffff3d;
+}
+
+.header{
   text-align: center;
-  box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
-  width: 80%;
-  height:80;
-  border-style: solid;
-  border-color: #161C84;
-  border-width: 0px;
-  overflow: auto;
-  margin-top: 30px;
+  color: #161C84;
+  font-family: Jomhuria;
+  font-size: 40px;
+  position: relative;
+  margin-top: 50px;
+}
+
+
+
+  
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  
+   
+}
+
+.rebutton{
+  background-color:#161C84;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 130px;
+  padding-top: 9px;
+  height: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 45%;
+ 
+
+}
+.error-question{
+  color: red;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 41%;
   font-size: 20px;
-  text-align: left; */
+  font-weight: bold;
 
-  padding: 20px;
-  border-radius: 30px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(53, 103, 211, 0.904);
-  width: 80%;
-  /* border-style: solid; */
-  /* border-color: #161C84; */
-  /* border-width: 3px; */
-  height: 55%;
-  /* overflow: auto; */
-  margin-top: 2px;
-  background-color: rgba(255, 255, 255, 0.558);
+  
+}
+
+.questions div {
  
- 
-   
-   }
+  animation: fadeIn 1.2s ease-in-out;  /* Add this line */
+}
   
-  .header{
-  
-    margin: 80px;
-    color: #161C84;
-    font-family: Jomhuria;
-    font-size: 80px;
-    
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  input {
-    padding: 5px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  
-    
-  }
-  
-  
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.questions div:nth-child(1) {
+  animation-delay: 0.8s;
+}
+.questions div:nth-child(2) {
+  animation-delay: 1.4s;
+}
+.questions div:nth-child(3) {
+  animation-delay: 2.6s;
+}
+.questions div:nth-child(4) {
+  animation-delay: 3.8s;
+}
+.questions div:nth-child(5) {
+  animation-delay: 4.0s;
+}
+.questions div:nth-child(6) {
+  animation-delay: 5.2s;
+}
+.questions div:nth-child(7) {
+  animation-delay: 6.4s;
+}
+.questions div:nth-child(8) {
+  animation-delay: 7.6s;
+}
+.questions div:nth-child(9) {
+  animation-delay: 8.8s;
+}
+.questions div:nth-child(10) {
+  animation-delay: 9.0s;
+}
+
 
   
   
-  
- 
-  .Result{
-    background-color:#161C84;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    width: 130px;
-    padding-top: 9px;
-   
-    height: 60px;
-    margin-bottom: 40px;
-    text-align: center;
-    margin-bottom: 70px;
-
-  }
   
