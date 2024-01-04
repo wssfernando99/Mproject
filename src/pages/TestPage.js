@@ -1,5 +1,4 @@
 // import './TestPage.css';
-// // import img1 from './images/logo1.png'; 
 // import React, { useState } from 'react';
 // import { Testcom } from './components/Testcom';
 // import Navbar from './components/Navbar';
@@ -23,7 +22,7 @@
 //     return (
     
     
-//   <div className="background">
+//   <div className="background2">
 //         <div className='navbar'><Navbar /></div>
 //         <div className='header'>AQ-10 Test</div>
 //         <div className="questions"><Testcom question = "1. Does your child look at you when you call his/her name?" /></div>
@@ -107,43 +106,44 @@ import React, { useState } from 'react';
 import { Testcom } from './components/Testcom';
 import Navbar from './components/Navbar';
 import { useNavigate } from 'react-router-dom';
+import './TestPage.css';
 
 const questions = [
   {
     id: 1,
-    text: 'Does your child look at you when you call his/her name?',
+    text: '01) Does your child look at you when you call his/her name?',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
 
   {
     id: 2,
-    text: 'How easy is it for you to get eye contact with your child?',
+    text: '02) How easy is it for you to get eye contact with your child?',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
 
   {
     id: 3,
-    text: 'Does your child point to indicate that he/she wants something? (e.g.- Toy that is out of reach)',
+    text: '03) Does your child point to indicate that he/she wants something? (e.g.- Toy that is out of reach)',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
 
   {
     id: 4,
-    text: 'Does your child point to share an interest with you? (e.g.- Pointing at an interesting sight)',
+    text: '04) Does your child point to share an interest with you? (e.g.- Pointing at an interesting sight)',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
 
   {
     id: 5,
-    text: 'Does your child pretend? (e.g.- Care for dolls, talks on a toy phone)',
+    text: '05) Does your child pretend? (e.g.- Care for dolls, talks on a toy phone)',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
   {
     id: 6,
-    text: 'Does your child pretend? (e.g.- Care for dolls, talks on a toy phone)',
+    text: '06) Does your child pretend? (e.g.- Care for dolls, talks on a toy phone)',
     options: ['Strongly Agree', 'Agree', 'Disagree', 'Strongly Disagree'],
   },
-  // ... Add more questions in a similar format
+  
 ];
 
 export const TestPage = () => {
@@ -166,8 +166,8 @@ export const TestPage = () => {
     const hasAnsweredAllQuestions = questions.every((question) => selectedOptions.hasOwnProperty(question.id));
 
    if (hasAnsweredAllQuestions) {
-        // Navigate to the home page
-        navigate('/'); // Assuming your homepage route is '/'
+        
+        navigate('/'); 
       } else {
         setShowError(true);
       }
@@ -179,7 +179,7 @@ export const TestPage = () => {
     <div className="background">
       <div className='navbar'><Navbar /></div>
       <div className="questions">
-        <h1>AQ-10 Test</h1>
+        <div className='header'><h1>AQ-10 Test</h1></div>
         {questions.map((question) => (
           <div key={question.id}>
             <p>{question.text}</p>

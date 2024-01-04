@@ -5,18 +5,27 @@ body::-webkit-scrollbar {
 
  
 }
-.background {
+.background2 {
+   background-image: url('/src/pages/img/Untitled-1.png');
+    background-size: cover;
+    /* background-position-x: center;
+    background-position-y: center; */
+    height: 400vh;
+    display: flex;
+    align-items: center;
+    /* justify-content:top; */
+    position: absolute;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-start;
+    background-attachment: fixed;
+    
   
     
-    background-image: url('/src/pages/img/vecteezy_illustration-vector-graphic-of-international-day-of-families_.jpg');
-    background-attachment: fixed;
-    /* background-repeat: no-repeat;  */
-     height: fit-content; 
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    position: relative;
-    gap: 60px;
   
    }
   .navbar{
@@ -29,23 +38,44 @@ body::-webkit-scrollbar {
 
 
 .questions {
-    background-color: rgba(255, 255, 255, 0.663); /* Add a semi-transparent white background */
-    padding: 50px;
-    border-radius: 40px;
-    padding-top: 10px;
-    width: 1100px;
-    border-style: solid;
-    border-color: #161C84;
-    border-width: 1px;
+  /* background-color: rgba(255, 255, 255, 0.663); 
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 100px rgba(7, 30, 79, 0.904);
+  width: 80%;
+  height:80;
+  border-style: solid;
+  border-color: #161C84;
+  border-width: 0px;
+  overflow: auto;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: left; */
+
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(53, 103, 211, 0.904);
+  width: 80%;
+  /* border-style: solid; */
+  /* border-color: #161C84; */
+  /* border-width: 3px; */
+  height: 55%;
+  /* overflow: auto; */
+  margin-top: 2px;
+  background-color: rgba(255, 255, 255, 0.558);
+ 
+ 
    
    }
   
   .header{
   
-    margin: 100px;
+    margin: 80px;
     color: #161C84;
     font-family: Jomhuria;
-    font-size: 90px;
+    font-size: 80px;
     
   }
   
@@ -56,7 +86,7 @@ body::-webkit-scrollbar {
   
   label {
     margin: 10px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     text-align: left;
   }
@@ -66,52 +96,26 @@ body::-webkit-scrollbar {
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+  
     
   }
   
-  #rebutton{
-    font-size: 20px;
-    width: 120px;
-    height: 35px;
-    border-radius: 15px;
-    border-width: 1px;
-    cursor: pointer;
-    background-color: rgba(80, 87, 145, 0.212);
-    color: rgb(67, 70, 117);
-    
-}
-#rebutton:hover {
-  background-color: rgb(85, 103, 141);
-  color: white;
-  cursor: pointer
-}
-  .logo-container {
-    position: absolute;
-    top: -30px; /* Adjust the top position as needed */
-    left: -10px; /* Adjust the left position as needed */
-    z-index: 1; /* Ensure it's above the background */
-  }
   
-  .App-logo {
-    width: 70px; /* Adjust the size of logo */
-    height: auto;
-    position: absolute;
-    top: 95px;
-    left: 520px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
+
+  
+  
+  
  
   .Result{
     background-color:#161C84;
     color: #fff;
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     width: 130px;
     padding-top: 9px;
-    /* margin-top: 20px; */
+   
     height: 60px;
     margin-bottom: 40px;
     text-align: center;
