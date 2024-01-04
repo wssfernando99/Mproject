@@ -1,6 +1,43 @@
+.background-about {
+  /* background-image: url('/src/pages/img/medium-shot-child-being-creative.jpg') ; */
+  background-color: #1466b7a0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+ 
+}
+
+
+
 .navbar1{
   
     width: 100vw;
     position: absolute;
     left: 0px;
+}
+
+.head-about{
+text-align: center;
+color: #f9f9fc;
+font-family: Jomhuria;
+font-size: 80px;
+position: relative;
+margin-top: 50px;
+}
+
+.details{
+
+box-sizing: 20%;
+background-color: black;
+color: #f9f9fc;
+font-family: Jomhuria;
+font-size: 30px;
+position: relative;
+
+
+
 }
