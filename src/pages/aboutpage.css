@@ -1,6 +1,6 @@
 .background-about {
   /* background-image: url('/src/pages/img/medium-shot-child-being-creative.jpg') ; */
-  background-color: #1466b7a0;
+  background-color: #1466b7b9;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -8,6 +8,9 @@
   flex-direction: column;
   justify-content: flex-start;
   display: flex;
+  z-index: -1;
+  height: 1230px;
+ 
  
 }
 
@@ -15,9 +18,9 @@
 
 .navbar1{
   
-    width: 100vw;
-    position: absolute;
-    left: 0px;
+    width: 100%;
+    position: relative;
+    /* left: 100px; */
 }
 
 .head-about{
@@ -31,13 +34,111 @@ margin-top: 50px;
 
 .details{
 
-box-sizing: 20%;
-background-color: black;
-color: #f9f9fc;
+height: 400px;
+width: 340px;
+background-color: rgb(251, 251, 251);
+color: #04047b;
 font-family: Jomhuria;
 font-size: 30px;
 position: relative;
-
-
-
+margin-left: 130px;
+text-align: center;
+border-radius: 40px;
+flex-direction: column;
+margin-top: 40px;
 }
+
+
+.details2{
+
+  height: 400px;
+  width: 340px;
+  background-color: rgb(251, 251, 251);
+  color: #04047b;
+  font-family: Jomhuria;
+  font-size: 30px;
+  position: relative;
+  margin-left: 370px;
+  text-align: center;
+  border-radius: 40px;
+  flex-direction: column;
+  margin-top: 100px;
+
+  
+  }
+  .details3{
+
+    height: 400px;
+    width: 340px;
+    background-color: rgb(251, 251, 251);
+    color: #04047b;
+    font-family: Jomhuria;
+    font-size: 30px;
+    position: relative;
+    margin-left: 110px;
+    text-align: center;
+    border-radius: 40px;
+    flex-direction: column;
+    margin-top: 100px;
+  
+    
+    }
+
+  .image-caracter{
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+   
+  }
+  .about-container-first-three{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-container-second-two{
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* this under section is about us  */
+
+  .header-about-us{
+    text-align: center;
+    color: #4343e8;
+    font-family: Jomhuria;
+    font-size: 100px;
+    margin-top: 130px;
+     }
+
+  .paragraph1{
+    text-align: center;
+    width: 1000px;
+    margin-left: 280px;
+    height: 700px;
+    font-family: 'Calibri';
+    font-size: 20px;
+    line-height: 1.5;
+    
+  }
+  /* image baby */
+  .image-baby{
+    height: 200px;
+    width: 350px;
+    position: relative;
+    margin-top: 200px;
+  }
+
+  .container4{
+    background-image: url('/src/pages/img/aboutus.png');
+    margin-top: -120px;
+    z-index: -1;
+   
+  background-color: #b6b9fb;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  position: relative;
+
+  }
+ 
+  

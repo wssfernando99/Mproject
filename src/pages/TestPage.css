@@ -4,7 +4,7 @@
 } */  
 
 .background2{
-  background-image: url('/src/pages/img/imgques.png');
+  background-image: url('/src/pages/img/test1.png');
   background-color: #b6b9fb;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,48 +108,3 @@
   
 }
 
-.questions div {
- 
-  animation: fadeIn 1.2s ease-in-out;  /* Add this line */
-}
-  
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.questions div:nth-child(1) {
-  animation-delay: 0.8s;
-}
-.questions div:nth-child(2) {
-  animation-delay: 1.4s;
-}
-.questions div:nth-child(3) {
-  animation-delay: 2.6s;
-}
-.questions div:nth-child(4) {
-  animation-delay: 3.8s;
-}
-.questions div:nth-child(5) {
-  animation-delay: 4.0s;
-}
-.questions div:nth-child(6) {
-  animation-delay: 5.2s;
-}
-.questions div:nth-child(7) {
-  animation-delay: 6.4s;
-}
-.questions div:nth-child(8) {
-  animation-delay: 7.6s;
-}
-.questions div:nth-child(9) {
-  animation-delay: 8.8s;
-}
-.questions div:nth-child(10) {
-  animation-delay: 9.0s;
-}
-
-
-  
-  
-  
