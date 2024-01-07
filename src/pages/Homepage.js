@@ -2,12 +2,13 @@ import React from 'react'
 import './Homepage.css'
 import Navbar from './components/Navbar';
 import { Link } from 'react-router-dom';
+import { Footer } from './components/Footer';
 
 export const Homepage = () => {
   return (
-    
+    <div className='main-wrapper'>
+    <div className='navigationbar'><Navbar /></div>
     <div className='wrapper'>
-      <div className='navigationbar'><Navbar /></div>
       <div className="wrapper2"> 
         <div className="container2">
           <div className="pargraph"><p>Online autism tests can play an important role in your journey of self-discovery, and may inform your decision to pursue a formal diagnosis</p>  
@@ -27,6 +28,7 @@ export const Homepage = () => {
             </div>
         </div>
        </div>
+       <div>
        <div className='wrapper3'>
         <div className='wrapper3topic'>
           <h1>What is Autism?</h1>
@@ -59,7 +61,12 @@ export const Homepage = () => {
         </p>
         </div>
        </div>
+       </div>
+       <div className='footer'><Footer /></div>
+      </div>
     </div>
+ 
+   
     
     
 
