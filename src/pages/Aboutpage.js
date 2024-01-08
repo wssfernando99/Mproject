@@ -64,7 +64,7 @@ export const  Aboutpage = () => {
 
     <div className='details'>
     <img className='image-caracter' src={img3}/> {/*  added image dhanushka */}
-    <p> W S S Prerera<br></br>
+    <p> K P N P P Weerasuriya<br></br>
     Information Technology<br></br> Institute Of Technology <br></br>
     University of Moratuwa</p>    </div>
     </div>
@@ -189,42 +189,4 @@ export const  Aboutpage = () => {
 
 
 
-
-
-
-// import React from 'react'
-// import './aboutpage.css'
-// import Navbar from './components/Navbar';
-// import { Link } from 'react-router-dom';
-
-// export const Homepage = () => {
-//   return (
-    
-//     <div className='wrapper'>
-//       <div className='navigationbar'><Navbar /></div>
-//       <div className="wrapper2"> 
-//         <div className="container2">
-//           <div className="pargraph"><p>Online autism tests can play an important role in your journey of self-discovery, and may inform your decision to pursue a formal diagnosis</p>  
-//           </div>
-//           <div class="horizontal_line"></div>
-//           <div className="paragraph2"><p>Do you think your child might be autistic?</p>
-//           </div>
-//           <div id="logo">
-//           </div> 
-//         </div>
-//         <div className="container">
-//           <div className='item1'><h1>Happy Childhood</h1></div> 
-//           <div className='item2'><p>Childhood is the most fun and memorable time in anyone's life.it's first stage of life which we enjoy in what ever we like</p>
-//           </div>
-//             <div className="item3">
-//               <div className='bt1'><Link to='/TestPage'><button id='bt1'>Test</button></Link></div>
-//             </div>
-//         </div>
-//        </div>
-//     </div>
-    
-    
-
-//   )
-// }
 
