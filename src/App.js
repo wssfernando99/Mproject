@@ -3,7 +3,7 @@ import React from "react";
 import  Login from "./pages/Login";
 import Register from "./pages/Register";
 import { Welcome } from './pages/Welcome';
-import { TestPage } from './pages/TestPage';
+import TestPage from './pages/TestPage';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
