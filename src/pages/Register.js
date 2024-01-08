@@ -42,7 +42,7 @@ import axios from "axios";
   }
 
   return (
-    <div className="background">
+    <div className="background1">
     
       <div className="registration-container">
         <h1 className="header1">Register</h1>
