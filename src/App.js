@@ -11,6 +11,8 @@ import { Aboutpage } from "./pages/Aboutpage";
 import { Protectedlogout, Protectedlogin } from "./pages/components/Protected";
 
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +23,8 @@ function App() {
         <Route exact path="/register" element={<Protectedlogin><Register /></Protectedlogin>} />
         <Route exact path="/login" element={<Protectedlogin><Login /></Protectedlogin>} />
         <Route exact path="/aboutpage" element={<Aboutpage />} />
+       
+        
       </Routes>
     </BrowserRouter>
 
