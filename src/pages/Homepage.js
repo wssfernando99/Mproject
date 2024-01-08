@@ -3,14 +3,21 @@ import './Homepage.css'
 import Navbar from './components/Navbar';
 import { Link } from 'react-router-dom';
 import { Footer } from './components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export const Homepage = () => {
+  useEffect(()=> {
+      AOS.init({duration: 3000});
+  },[]);
+
   return (
     <div className='main-wrapper'>
     <div className='navigationbar'><Navbar /></div>
     <div className='wrapper'>
-      <div className="wrapper2"> 
-        <div className="container2">
+      <div className="wrapper2" data-aos="fade-up"> 
+        <div className="container2" >
           <div className="pargraph"><p>Online autism tests can play an important role in your journey of self-discovery, and may inform your decision to pursue a formal diagnosis</p>  
           </div>
           <div class="horizontal_line"></div>
@@ -28,8 +35,8 @@ export const Homepage = () => {
             </div>
         </div>
        </div>
-       <div>
-       <div className='wrapper3'>
+       <div className='second-wrapper' data-aos="fade-up">
+       <div className='wrapper3' >
         <div className='wrapper3topic'>
           <h1>What is Autism?</h1>
         </div>
@@ -47,7 +54,7 @@ export const Homepage = () => {
         </div>
 
        </div>
-       <div className='wrapper5'>
+       <div className='wrapper5' >
         <div className='wrapper5logo'>
         </div>
         <div className='wrapper5para'>
