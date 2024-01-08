@@ -16,7 +16,10 @@ function Navbar() {
 return (
 
   <nav className="nav">
-    <a className='nav__brand'>Autisum spectrum</a>
+    <div className='nav-header'>
+      <div><a className='nav__brand'>Autisum spectrum</a></div>
+      <div className='nav-logo'></div>
+    </div>
     <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <div className='line1'></div>
         <div className='line1'></div>
