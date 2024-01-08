@@ -2,14 +2,21 @@ import React from 'react'
 import './Welcome.css'
 import Navbar from './components/Navbar';
 import { Link } from 'react-router-dom';
-
+import {Moredetails} from './components/Moredetails';
+import { Footer } from './components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export const Welcome = () => {
+  useEffect(()=> {
+    AOS.init({duration: 3000});
+},[]);
   return (
     
     <div className='wrapper'>
       <div className='navigationbar'><Navbar /></div>
-      <div className="wrapper2"> 
+      <div className="wrapper2" data-aos="fade-up"> 
         <div className="container2">
           <div className="pargraph"><p>Online autism tests can play an important role in your journey of self-discovery, and may inform your decision to pursue a formal diagnosis</p>  
           </div>
@@ -29,6 +36,10 @@ export const Welcome = () => {
             </div>
         </div>
        </div>
+       <div className='welcome-second-wrapper' data-aos="fade-left">
+          <Moredetails />
+       </div>
+       <div className='footer'><Footer /></div>
     </div>
     
     
