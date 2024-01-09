@@ -8,7 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 import { Homepage } from './pages/Homepage';
 import { Protectedlogout, Protectedlogin } from "./pages/components/Protected";
-
+import {Aboutpage} from './pages/Aboutpage';
+import Helppage from "./pages/Helppage";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path='/TestPage' element={<Protectedlogout><TestPage /></Protectedlogout>} />
         <Route exact path="/register" element={<Protectedlogin><Register /></Protectedlogin>} />
         <Route exact path="/login" element={<Protectedlogin><Login /></Protectedlogin>} />
+        <Route path="/Aboutpage" element ={<Aboutpage />} />
+        <Route path="/Helppage" element ={<Helppage />} />
       </Routes>
     </BrowserRouter>
 

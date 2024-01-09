@@ -6,7 +6,7 @@ import img3 from './img/sankalpa.jpg';
 import img2 from './img/sayuranga.jpg';
 import img4 from './img/parakrama.jpg';
 import img5 from './img/hashini.jpg';
-
+import { Footer } from './components/Footer';
 
 
 
@@ -89,7 +89,7 @@ export const  Aboutpage = () => {
     
     </div>
 
-
+    <div className='footer'><Footer /></div>
     </div>
 
     </>

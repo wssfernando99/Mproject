@@ -1,0 +1,36 @@
+.container4{
+    background-image: url('/src/pages/img/aboutus.png');
+    margin-top: 0px;
+    z-index: -1;
+    background-color: #b6b9fb;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.header-help{
+    text-align: center;
+    color: #4343e8;
+    font-family: Jomhuria;
+    font-size: 50px;
+    margin-top: 130px;
+}
+.all-paragrahs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    position: relative;
+}
+.paragraph-help{
+    text-align: left;
+    width: 1000px;
+    margin-left: 280px;
+    height: 700px;
+    font-family: 'Calibri';
+    font-size: 20px;
+    line-height: 1.5;
+   height: fit-content;
+}
+.footer{
+    margin-top: 10%;
+  }
