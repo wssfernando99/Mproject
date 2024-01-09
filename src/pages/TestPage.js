@@ -107,6 +107,7 @@ import { Testcom } from './components/Testcom';
 import Navbar from './components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import './TestPage.css';
+import { Footer } from './components/Footer';
 
 const questions = [
   {
@@ -254,7 +255,7 @@ const questions = [
         <button className='rebutton' id='rebutton' onClick={handleSubmit}>Result </button>
         
          
-     
+      <div className='footer'><Footer /></div>
     </div>
     </>
   );
