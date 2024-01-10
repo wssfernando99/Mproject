@@ -31,6 +31,37 @@
     line-height: 1.5;
    height: fit-content;
 }
+.paragraph-text{
+    text-align: left;
+    width: 1000px;
+    margin-left: 280px;
+    height: fit-content;
+    font-family: 'Calibri';
+    font-size: 20px;
+    line-height: 1.5;
+    height: fit-content;
+}
+#message{
+    width: 60%;
+    height: 60%;
+}
 .footer{
     margin-top: 10%;
+  }
+  #bt4{
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgba(80, 87, 145, 0.212);
+    color: rgb(67, 70, 117);
+}
+
+
+#bt4:hover {
+    background-color: rgb(85, 103, 141);
+    color: white;
+    cursor: pointer;
   }

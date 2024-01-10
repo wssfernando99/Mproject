@@ -211,7 +211,7 @@ const questions = [
 
    if (hasAnsweredAllQuestions) {
         
-        navigate('/Homepage'); 
+        navigate('/Scorepage'); 
       } else {
         setShowError(true);
       }

@@ -61,6 +61,15 @@ Discover online and local communities for individuals and families affected by a
 
       </p>
     </div>
+    <div className='paragraph-text'>
+      <label>Enter your message</label><br/>
+      <input
+              type="text"
+              name="message"
+              id="message"
+            /> <br/>
+      <button id='bt4'>submit</button>
+    </div>
 </div>
 
     {/* </div> */}

@@ -10,6 +10,7 @@ import { Homepage } from './pages/Homepage';
 import { Protectedlogout, Protectedlogin } from "./pages/components/Protected";
 import {Aboutpage} from './pages/Aboutpage';
 import Helppage from "./pages/Helppage";
+import Scorepage from "./pages/Scorepage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/TestPage' element={<Protectedlogout><TestPage /></Protectedlogout>} />
         <Route exact path="/register" element={<Protectedlogin><Register /></Protectedlogin>} />
         <Route exact path="/login" element={<Protectedlogin><Login /></Protectedlogin>} />
+        <Route exact path="/Scorepage" element={<Scorepage />} />
         <Route path="/Aboutpage" element ={<Aboutpage />} />
         <Route path="/Helppage" element ={<Helppage />} />
       </Routes>
