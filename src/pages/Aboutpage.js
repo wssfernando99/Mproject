@@ -50,11 +50,14 @@ export const  Aboutpage = () => {
     <div className='head-about'>Autism Sprectrum is <br></br>Brought to you By:</div>
     <div className='about-container-first-three'>
     <div className='details'>
+
+
     <img className='image-caracter' src={img1}/> {/*  added image*/}
     <p> B M D D P Munasinghe<br></br>
     Information Technology<br></br> Institute Of Technology <br></br>
     University of Moratuwa</p>    </div>
 
+    
     <div className='details'>
     <img className='image-caracter' src={img2}/> {/*  added image  */}
     <p> W S S Prerera<br></br>
@@ -62,6 +65,8 @@ export const  Aboutpage = () => {
     University of Moratuwa</p>    </div>
     
 
+    
+    
     <div className='details'>
     <img className='image-caracter' src={img3}/> {/*  added image  */}
     <p> K P N P P Weerasuriya<br></br>
@@ -70,12 +75,15 @@ export const  Aboutpage = () => {
     </div>
 
     <div className='about-container-second-two'>
+
     <div className='details2'>
     <img className='image-caracter' src={img4}/> {/*  added  */}
     <p> W S S Prerera<br></br>
     Information Technology<br></br> Institute Of Technology <br></br>
     University of Moratuwa</p>    </div>
 
+    
+    
     <div className='details3'>
     <img className='image-caracter' src={img5}/> {/*  added image  */}
     <p> W S S Prerera<br></br>
