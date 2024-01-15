@@ -111,11 +111,8 @@ const questions = [
 
    if (hasAnsweredAllQuestions) {
         
-<<<<<<< Updated upstream
-        navigate('/Homepage'); 
-=======
+
          navigate('/Scorepage'); 
->>>>>>> Stashed changes
       } else {
         setShowError(true);
       }
