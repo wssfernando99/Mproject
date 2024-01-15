@@ -94,15 +94,17 @@ const questions = [
 
   // };
 
+                                             // pass the values
+
   const handleOptionChange = (questionId, selectedOption) => {
       const selectedValue = questions.find((question) => question.id === questionId).answerValues[selectedOption];
 
   
-    setSelectedOptions({ ...selectedOptions, [questionId]: selectedOption });
+    setSelectedOptions({ ...selectedOptions, [questionId]: selectedValue });
   };
   
 
-
+                                                 //  validation
 
   const handleSubmit = () => {
     const hasAnsweredAllQuestions = questions.every((question) => selectedOptions.hasOwnProperty(question.id));
@@ -127,19 +129,22 @@ const questions = [
         {questions.map((question) => (
           <div key={question.id}>
             <p>{question.text}</p>
-            {question.options.map((option, index) => (
-              <label key={index}>
+            {question.options.map((option,answerValues) => (
+              <label key={answerValues}>
                 {/* <input
                   type="radio"
                   value={`q${question.id}a${index + 1}`}
                   checked={selectedOptions[question.id] === `q${question.id}a${index + 1}`}
                   onChange={() => handleOptionChange(question.id, `q${question.id}a${index + 1}`)}
                   /> */}
+
+                  
+                  {/* add radio buttons to question */}
                   <input
                    type="radio"
-                   value={index}
-                   checked={selectedOptions[question.id] === index}
-                   onChange={() => handleOptionChange(question.id, index)}
+                   value={answerValues}
+                   checked={selectedOptions[question.id] === answerValues}
+                   onChange={() => handleOptionChange(question.id, answerValues)}
                   />
                 
                 {option}
